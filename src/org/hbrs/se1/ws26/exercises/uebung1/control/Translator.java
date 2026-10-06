@@ -8,14 +8,14 @@ package org.hbrs.se1.ws26.exercises.uebung1.control;
  * @author saschaalda
  */
 
-interface Translator {
-	double version = 1.0; // Version des Interface
+	public interface Translator {
+		double version = 1.0; // Version des Interface
 	
 	/**
 	 * Uebersetzt eine numerische Zahl in eine String-basierte
 	 * Repraesentation gemaess der Spezifikation in der Aufgabe 1-2 
 	 */
-	String translateNumber(int number);
+	public String translateNumber(int number);
 
 } 
 

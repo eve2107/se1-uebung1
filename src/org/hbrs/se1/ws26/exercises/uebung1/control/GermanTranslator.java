@@ -8,9 +8,42 @@ public class GermanTranslator implements Translator {
 	 * Methode zur Übersetzung einer Zahl in eine String-Repraesentation
 	 */
 	 public String translateNumber(int number) {
-		// [ihr Source Code aus Übung 1-2]
-		return "null";
-	}
+
+		 if (number <1 || number > 100) {
+			 return "Übersetzung der Zahl " + number + " nicht möglich. Ungültiger Wert" + "("+version+")";
+		 }
+		 String[] einer = {"", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"};
+
+		 String[] elfBis9Zehn = {"zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"};
+
+		 String[] zehner = {"", "zehn", "zwanzig", "dreißig", "vierzig", "fünfzig", "sechzig", "siebzig", "achtzig", "neunzig"};
+
+
+		if (number == 1) {
+			return "eins";
+		} else
+		if (number == 100) {
+			return "einhundert";
+		} else
+			if (number >= 10 && number <= 19) {
+				return elfBis9Zehn[number % 10];
+				}
+				int einerStelle = number%10;
+				int zehnerStelle = number/10;
+
+				if (einerStelle == 0) {
+					return zehner[zehnerStelle];
+				}
+				else
+					if (zehnerStelle == 0) {
+						return einer[einerStelle];
+					}
+					else
+         {
+							return einer[einerStelle] + "und" + zehner[zehnerStelle];
+		 }
+
+	 }
 
 	/**
 	 * Objektmethode der Klasse GermanTranslator zur Ausgabe einer Info.
