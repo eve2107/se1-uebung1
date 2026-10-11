@@ -12,7 +12,7 @@ public class GermanTranslator implements Translator {
 		 if (number <1 || number > 100) {
 			 return "Übersetzung der Zahl " + number + " nicht möglich. Ungültiger Wert" + "("+version+")";
 		 }
-		 String[] einer = {"", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun"};
+		 String[] einer = {"", "ein", "zwei", "drei", "vier", "fünf", "sechs", "sieb", "acht", "neun"};
 
 		 String[] elfBis9Zehn = {"zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"};
 
@@ -21,6 +21,9 @@ public class GermanTranslator implements Translator {
 
 		if (number == 1) {
 			return "eins";
+		} else
+			if (number == 7) {
+				return "sieben";
 		} else
 		if (number == 100) {
 			return "einhundert";
