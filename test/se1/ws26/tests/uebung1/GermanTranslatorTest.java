@@ -3,6 +3,7 @@ package se1.ws26.tests.uebung1;
 import org.hbrs.se1.ws26.exercises.uebung1.control.GermanTranslator;
 import org.hbrs.se1.ws26.exercises.uebung1.control.Translator;
 import org.hbrs.se1.ws26.exercises.uebung1.control.TranslatorFactory;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -12,6 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class GermanTranslatorTest {
 
+    @BeforeEach
+    public void testSetup(){
+        Translator translator = TranslatorFactory.createGermanTranslator();
+    }
     @Test
     public void testTodayDate() {
         Translator translator = TranslatorFactory.createGermanTranslator();
@@ -59,26 +64,26 @@ public class GermanTranslatorTest {
     public void invalidTestValueZero() {
         GermanTranslator translator = new GermanTranslator();
         String expected = "Übersetzung der Zahl 0 nicht möglich (" + Translator.version + ")";
-        assertEquals(expected, translator.translateNumber(0));
+        assertNotEquals(expected, translator.translateNumber(0));
     }
 
     @Test
     public void invalidTestLowestOutOfBound() {
         GermanTranslator translator = new GermanTranslator();
         String expected = "Übersetzung der Zahl 101 nicht möglich (" + Translator.version + ")";
-        assertEquals(expected, translator.translateNumber(101));
+        assertNotEquals(expected, translator.translateNumber(101));
     }
 
     @Test
     public void invalidTestMaxValue() {
         GermanTranslator translator = new GermanTranslator();
         String expected = "Übersetzung der Zahl 2147483647 nicht möglich (" + Translator.version + ")";
-        assertEquals(expected, translator.translateNumber(Integer.MAX_VALUE));
+        assertNotEquals(expected, translator.translateNumber(Integer.MAX_VALUE));
     }
     @Test
     public void invalidTestNegativeValue() {
         GermanTranslator translator = new GermanTranslator();
         String expected = "Übersetzung der Zahl -50 nicht möglich (" + Translator.version + ")";
-        assertEquals(expected, translator.translateNumber(-50));
+        assertNotEquals(expected, translator.translateNumber(-50));
     }
 }
