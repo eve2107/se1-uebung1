@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="org.jetbrains.annotations.Nullable" />
     <option name="myDefaultNotNull" value="org.jetbrains.annotations.NotNull" />
@@ -40,6 +41,9 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="corretto-19" project-jdk-type="JavaSDK">
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_26" default="true" project-jdk-name="26" project-jdk-type="JavaSDK">
+>>>>>>> 4affe00a2aabcd093872963644c6e023225b3581
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

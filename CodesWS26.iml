@@ -24,6 +24,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+<<<<<<< HEAD
     <orderEntry type="module-library">
       <library name="JUnit5">
         <CLASSES>
@@ -56,5 +57,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+=======
+>>>>>>> 4affe00a2aabcd093872963644c6e023225b3581
   </component>
 </module>
